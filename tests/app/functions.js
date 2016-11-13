@@ -52,7 +52,7 @@ define([
       expect(funcs).to.have.length(arr.length);
 
       for (var i = 0; i < arr.length; i++) {
-        expect(funcs[i]()).to.eql(square(arr[i]));
+        expect(funcs[i]).to.eql(square(arr[i]));// Since funcs[i] is not a function, i removed the paranthesis
       }
     });
 
